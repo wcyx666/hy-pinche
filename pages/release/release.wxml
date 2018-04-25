@@ -1,0 +1,21 @@
+<view class="release">
+  <!--类型选择 -->
+  <view class="release_class">
+    <view class="release_class_title_content">
+      <view class="release_class_item">
+        <navigator url='/pages/release/travel-release/travel-release' hover-class="none">
+          <image src='../img/meitian.png'></image>
+          <view class="release_class_item_title">每天拼车、顺风车</view>
+          <view class="release_class_item_txt">适用于固定路线每天往返拼车的车主或乘客，长期有效</view>
+        </navigator>  
+      </view>
+      <view class="release_class_item">
+        <navigator url='/pages/release/pinche-release/pinche-release' hover-class="none">
+          <image src='../img/danci.png'></image>
+          <view class='release_class_item_title'>单次拼车、顺风车</view>
+          <view class='release_class_item_txt'>适用于大多数一次性拼车的车主或乘客，过期自动下线</view>
+        </navigator>  
+      </view>
+    </view> 
+  </view>
+</view>

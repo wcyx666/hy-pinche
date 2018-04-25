@@ -1,0 +1,76 @@
+<view class="home">
+  <view class="home_head">
+    <swiper autoplay="{{autoplay}}" vertical="{{ vertical }}" circular="{{ circular }}" interval="{{interval}}" duration="{{duration}}" indicator-dots="{{ indicator }}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="home_router">
+    <radio-group class="radio-group">
+      <label class="{{ activeId == item.name?'active':'' }}" wx:for="{{items}}">
+        <navigator url='{{ item.url }}' hover-class="none">
+          <image src='{{ item.src }}'></image>
+          <radio value="{{item.name}}" checked="{{item.checked}}"/>
+          <text>{{item.value}}</text>
+        </navigator>   
+      </label>
+    </radio-group>
+  </view>
+  <view class="home_news">
+    <view class="home_news_left">
+      <image src='../img/icon_news.png'></image>
+    </view>
+    <view class="home_news_right">
+      <swiper autoplay="{{newsautoplay}}" vertical="{{ newsVertical }}" circular="{{ circular }}" interval="{{newsInterval}}" duration="{{duration}}">
+        <block wx:for="{{ news }}">
+          <swiper-item>
+            <view>{{ item.title }}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="home_siji">
+    <view class="home_siji_title">
+     推荐车主
+    </view>
+    <view class="list" wx:for="{{ array }}">
+        <view class="list_top">
+          <view class="list_top_left">
+            <view class="list_top_left_localc">
+              <text>起</text>
+              {{ item.localc }}
+            </view>
+            <view class="list_top_left_localc">
+              <text class="zong">终</text>
+              {{ item.local }}
+            </view>
+          </view>
+          <view class="list_top_right" wx:if="{{item.models != ''}}">
+              {{ item.models }}
+          </view>
+        </view>
+        <view class="list_bottom">
+          <view class="list_bottom_left">
+            <view class="list_bottom_prot">
+              每天往返，车接车送
+            </view>
+            <view class="list_bottom_get">
+              <view>出发：每天{{ item.pctime }}</view>
+              <view>返程：每天{{ item.pctimes }}</view>
+            </view>
+            <view class="list_bottom_info">
+              <text>车主</text>/{{ item.lot }}空位
+            </view>
+          </view>
+          <view class="list_bottom_right" bindtap='phone' data-phone="{{item.phone}}" data-uid="{{ item.uid }}" data-name="{{item.name}}">
+            拨打电话
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="footer_bottom"> ~ 别滑动了，没有了 ~ </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="travel">
+  <!-- 锚点展示 -->
+  <view class="top_btn">
+    <view class="icon beijing">
+      北京
+    </view>
+    <view class="icon taiyuan">
+      太原
+    </view>
+    <view class="icon datong">
+      大同
+    </view>
+    <view class="icon huanren">
+      怀仁
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class="list" wx:for="{{ array }}">
+      <view class="list_left">
+        <image src='https://www.hyexw.com/image/chuxing_img.png'></image>
+      </view>
+      <view class="list_right">
+        <view class="server_title">
+          {{ item.name }}
+        </view>
+        <view class="server_text">
+          跑车路线：{{ item.local }}
+        </view>
+        <view class="server_text">
+          优势：{{ item.server }}
+        </view>
+      </view>
+      <view class="icon_phone" bindtap='phone' data-phone="{{item.phone}}">
+        <image src='../img/icon_phone.png'></image>
+      </view>
+  </view>
+</view>

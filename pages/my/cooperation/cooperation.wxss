@@ -1,0 +1,32 @@
+/* pages/my/cooperation/cooperation.wxss */
+.cooperation_banner image {
+  width: 100%;
+  height: 185px;
+}
+.cooperation_content {
+  padding: 0 30rpx;
+  color: #333;
+}
+.cooperation_content_title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 30rpx 0;
+  padding-left: 50rpx;
+}
+.cooperation_content_phone {
+  font-size: 14px;
+  padding-left: 50rpx;
+  color: #5596e5;
+}
+.guanggao {
+  background: url(https://www.hyexw.com/image/guanggao.png) no-repeat center left;
+  background-size: 20px;
+}
+.hezuo {
+  background: url(https://www.hyexw.com/image/hezuo.png) no-repeat center left;
+  background-size: 20px;
+}
+.huoban {
+  background: url(https://www.hyexw.com/image/huoban.png) no-repeat center left;
+  background-size: 20px;
+}

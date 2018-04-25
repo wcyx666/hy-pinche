@@ -1,0 +1,25 @@
+<view class="cooperation">
+  <view class="cooperation_banner">
+    <image src='https://www.hyexw.com/image/cooperation.png'></image>
+  </view>
+  <view class="cooperation_content">
+    <view class="cooperation_content_title guanggao">
+      广告投放
+    </view>
+    <view class="cooperation_content_phone">
+      15110729331（微信同步）
+    </view>
+    <view class="cooperation_content_title hezuo">
+      商务合作
+    </view>
+    <view class="cooperation_content_phone">
+      15110729331（微信同步）
+    </view>
+    <view class="cooperation_content_title huoban">
+      合作伙伴
+    </view>
+    <view class="cooperation_content_phone">
+      新浪微博:浑源那点事儿
+    </view>
+  </view>
+</view>

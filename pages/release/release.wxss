@@ -1,0 +1,39 @@
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+.release {
+  width: 100%;
+  height: 100%;
+}
+.release_class {
+  padding: 30rpx;
+}
+.release_class_title {
+  font-size: 14px;
+  color: #333;
+}
+.release_class_item {
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+.release_class_item navigator {
+  display: block;
+  width:100%;
+}
+.release_class_item image {
+  width: 100px;
+  height: 100px;
+}
+.release_class_item:nth-child(2) {
+  margin-left: 20rpx;
+}
+.release_class_item_title {
+  font-size: 16px;
+  color: #333;
+  padding-bottom: 10rpx;
+}
+.release_class_item_txt {
+  font-size: 14px;
+  color: #888;
+}

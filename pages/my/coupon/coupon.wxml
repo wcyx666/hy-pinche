@@ -1,0 +1,48 @@
+<view class="pinche">
+  <view wx:if="{{ array.length > 0 }}">
+    <view class="pinche-list" wx:for="{{ array }}">
+      <view class="pinche-list-top">
+        <view class="pinche-list-top-left">
+          <view class="point">
+            <text>起：</text>
+            {{ item.localc }}
+          </view>
+          <view class="end">
+            <text>终：</text>
+            {{ item.local }}
+          </view>
+        </view>
+        <view class="pinche-list-top-right">
+          {{ item.models }}
+        </view>
+      </view>
+      <view class="pinche-list-bottom">
+        <view class="list_left">
+          <image src='{{ item.wxlogo }}'></image>
+          <view>{{ item.name }}</view>
+        </view>
+        <view class="list_right">
+          <view class="server_title">
+            <text>{{ item.dates }} {{ item.timesa }}</text>出发 
+          </view>
+          <view class="server_text">
+            还有<text>{{ item.man }}</text>个座位
+          </view>
+          <view class="server_text">
+            车牌：{{ item.server }}
+          </view>
+        </view>
+        <view class="icon_phone" bindtap='phone' data-phone="{{item.phone}}" data-uid="{{ item.uid }}" data-name="{{item.name}}">
+          <image src='../../img/icon_phone.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class="butPad">
+        <button type="primary" open-type="share" class="default">分享到微信朋友、群</button>
+    </view>
+  </view>
+  <view class="null" wx:if="{{ array.length == 0 }}">
+      <image src='../../img/icon_null.png'></image>
+      <text>没有拼车信息</text>
+  </view>
+</view>

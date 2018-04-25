@@ -1,0 +1,29 @@
+<view class="my">
+  <view class="my_info">
+    <image src="{{ info.avatarUrl }}"></image>
+    <view class="my_name">
+      {{ info.nickName }}
+    </view>
+  </view>
+  <view class="my_list">
+    <view class="my_list_item feedback">
+      <navigator url='/pages/my/coupon/coupon?name={{ info.nickName }}'>
+        分享我的拼车
+      </navigator>
+    </view>
+    <view class="my_list_item feedback">
+      <navigator url='/pages/my/paoche/paoche?name={{ info.nickName }}'>
+        分享我的跑车
+      </navigator>
+    </view>
+    <view class="my_list_item about">
+      <navigator url='/pages/my/about/about'>
+        用户协议
+      </navigator> 
+    </view>
+    <view class="my_list_item feedback">
+      <text>客服在线</text>   
+    </view>
+    <button open-type="contact" class="displayNone">客户在线</button>
+  </view>
+</view>

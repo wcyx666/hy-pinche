@@ -1,0 +1,33 @@
+/* pages/my/about/about.wxss */
+.about {
+  padding: 30rpx;
+}
+.about_title {
+  font-size: 16px;
+  color: #5596e5;
+  border-bottom: 1px solid #5596e5;
+  padding-bottom: 20rpx;
+}
+.about_content_title {
+  font-size: 14px;
+  color: #333;
+  padding: 15rpx 0;
+  position: relative;
+  padding-left: 30rpx;
+}
+.about_content_title:after {
+  display: block;
+  content: "";
+  width: 18rpx;
+  height: 18rpx;
+  background: #5596e5;
+  position: absolute;
+  top: 24rpx;
+  left: 0;
+  border-radius: 18rpx;
+}
+.about_content_txt {
+  font-size: 12px;
+  color: #333;
+  line-height: 44rpx;
+}

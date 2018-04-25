@@ -1,0 +1,94 @@
+<view class="releasse">
+  <view class="releasse_content">
+    <view class="releasse_content_info">
+      <view class="releasse_form_title">
+        填写司机信息
+      </view>
+      <view class="releasse_form">
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            出发地：
+          </view>
+          <picker bindchange="bindLocalcChange" value="{{index}}" range="{{arrayLocalc}}">
+            <input bindtap="bindLocalc" value="{{ localc }}" placeholder="输入出发地" disabled="true"/>
+          </picker>
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            目的地：
+          </view>
+          <picker bindchange="bindLocalChange" value="{{index}}" range="{{arrayLocal}}">
+            <input bindtap="bindLocalc" value="{{ local }}" placeholder="输入目的地" disabled="true"/>
+          </picker>
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            出发时间：
+          </view>
+          <picker mode="time" value="{{pctime}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <input bindtap="bindDates" value="{{ pctime }}" placeholder="输入出发时间" disabled	="true"/>
+          </picker>   
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            返程时间：
+          </view>
+          <picker mode="time" value="{{pctimes}}" start="09:01" end="21:01" bindchange="bindTimesChange">
+            <input bindtap="bindDates" value="{{ pctimes }}" placeholder="输入返程时间" disabled	="true"/>
+          </picker>   
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            座位：
+          </view>
+          <input bindtap="bindMan" value="{{ lot }}" placeholder="输入车位" disabled	="true"/>
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            姓名：
+          </view>
+          <input bindinput="bindName" placeholder="请输入姓名"/>
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            车牌：
+          </view>
+          <input bindinput="bindServer" placeholder="请输入正确车牌"/>
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            车型：
+          </view>
+          <input bindinput="bindModels" placeholder="例如：雅阁"/>
+        </view>
+      </view>
+    </view>
+    <view class="releasse_name_info">
+      <view class="releasse_form_title">
+        确认联系信息
+      </view>
+      <view class='releasse_form'>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            微信名称：
+          </view>
+          <input bindinput="bindWxName" value="{{ wxname }}" placeholder="请输入微信名称"/>
+        </view>
+        <view class="releasse_form_map">
+          <view class="releasse_form_name">
+            手机号码：
+          </view>
+          <input bindinput="bindPhone" placeholder="请输入手机号码"/>
+        </view>
+      </view>
+    </view>
+    <view class="reg-agr">
+      <navigator url='/pages/my/about/about'>
+        发布即表示您已同意<text>寻师傅服务条款</text>
+      </navigator>
+    </view>
+    <view class="default" bindtap='sublimt'>
+      发布
+    </view>
+  </view>
+</view>

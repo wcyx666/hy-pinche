@@ -1,0 +1,43 @@
+<view class="travel">
+  <view class="list-content">
+    <view class="list" wx:for="{{ array }}">
+        <view class="list_top">
+          <view class="list_top_left">
+            <view class="list_top_left_localc">
+              <text>起</text>
+              {{ item.localc }}
+            </view>
+            <view class="list_top_left_localc">
+              <text class="zong">终</text>
+              {{ item.local }}
+            </view>
+          </view>
+          <view class="list_top_right" wx:if="{{item.models != ''}}">
+              {{ item.models }}
+          </view>
+        </view>
+        <view class="list_bottom">
+          <view class="list_bottom_left">
+            <view class="list_bottom_prot">
+              每天往返，车接车送
+            </view>
+            <view class="list_bottom_get">
+              <view>出发：每天{{ item.pctime }}</view>
+              <view>返程：每天{{ item.pctimes }}</view>
+            </view>
+            <view class="list_bottom_info">
+              <text>车主</text>/{{ item.lot }}空位
+            </view>
+          </view>
+          <view class="list_bottom_right" bindtap='phone' data-phone="{{item.phone}}" data-uid="{{ item.uid }}" data-name="{{item.name}}">
+            拨打电话
+          </view>
+        </view>
+    </view>
+    <view class="footer_bottom"> ~ 别滑动了，没有了 ~ </view>
+    <view class="null" wx:if="{{ array.length == 0 }}">
+      <image src='../img/icon_null.png'></image>
+      <text>没有师傅信息</text>
+    </view>
+  </view>
+</view>

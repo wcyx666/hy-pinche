@@ -1,0 +1,38 @@
+<view class="travel">
+  <view class="list-content" wx:if="{{ array.length > 0 }}">
+    <view class="list" wx:for="{{ array }}">
+        <view class="info_num">
+          服务人数：{{ item.uid }}
+        </view>
+        <view class="info_content">
+          <view class="list_left">
+            <image src='https://www.hyexw.com/image/chuxing_img.png'></image>
+          </view>
+          <view class="list_right">
+            <view class="server_title">
+              {{ item.name }} <text>{{ item.models }}</text>
+            </view>
+            <view class="server_text">
+              跑车路线：
+              {{ item.localc }}
+              <image src='https://www.hyexw.com/image/icon_wf.png'></image>
+              {{ item.local }}
+            </view>
+            <view class="server_text">
+              车牌：{{ item.server }}
+            </view>
+          </view>
+          <view class="icon_phone" bindtap='phone' data-phone="{{item.phone}}" data-uid="{{ item.uid }}" data-name="{{item.name}}">
+            <image src='../../img/icon_phone.png'></image>
+          </view>
+        </view>
+    </view>
+    <view class="butPad">
+      <button type="primary" open-type="share" class="default">分享到微信朋友、群</button>
+    </view>
+  </view>
+  <view class="null" wx:if="{{ array.length == 0 }}">
+    <image src='../img/icon_null.png'></image>
+    <text>没有师傅信息</text>
+  </view>
+</view>

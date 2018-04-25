@@ -1,0 +1,235 @@
+/* pages/travel/travel.wxss */
+.home {
+  width: 100%;
+}
+.home_head {
+  position: relative;
+}
+.home_head swiper {
+  width: 100%;
+  height: 200px;
+}
+.home_head image {
+  width: 100%;
+  height: 100%;
+}
+.city {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.home_router {
+  overflow: hidden;
+  border-bottom: 5px solid #f3f3f3;
+}
+.radio-group {
+  width: 100%;
+}
+.radio-group label {
+  float: left;
+  display: block;
+  width: 25%;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+.radio-group label image {
+  width:90rpx;
+  height:90rpx;
+  display: block;
+  margin: 20rpx auto 0;
+}
+.radio-group label text {
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  display: block;
+}
+.radio-group label radio {
+  display: none;
+}
+.list {
+  padding: 30rpx;
+  border-bottom: 5px solid #f3f3f3;
+  overflow: hidden;
+  font-size: 14px;
+}
+.list:last-child {
+  border-bottom: none;
+}
+.list_top {
+  width: 100%;
+  overflow: hidden;
+}
+.list_top_left {
+  width: 70%;
+  float: left;
+}
+.list_top_left_localc {
+  margin-bottom:22rpx;
+}
+.list_top_left_localc text {
+  background: #85dc84;
+  width: 45rpx;
+  height: 45rpx;
+  float: left;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 2px;
+  color: #fff;
+  display: block;
+  margin-right: 10rpx;
+}
+.list_top_left_localc text.zong {
+  background: #ff6669;
+}
+.list_top_right {
+  width: 28%;
+  height: 30px;
+  border: 1px solid #85dc84;
+  text-align: center;
+  line-height: 30px;
+  float: right;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #85dc84;
+  border-radius: 5px;
+}
+.list_bottom_left {
+  width: 70%;
+  float: left;
+  color: #888;
+}
+.list_bottom_prot {
+  font-size: 12px;
+  color: #85dc84;
+  margin-bottom: 10rpx;
+}
+.list_bottom_get view {
+  margin-bottom: 10rpx;
+}
+.list_bottom_info {
+  overflow: hidden;
+}
+.list_bottom_info text {
+  display: block;
+  width: 80rpx;
+  height: 45rpx;
+  background: #f3a42b;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  float: left;
+  margin-right: 10rpx;
+}
+.list_bottom {
+  height: 98px;
+  overflow: hidden;
+  position: relative;
+}
+.list_bottom_right {
+  width:28%;
+  height:30px;
+  border:1px solid #85dc84;
+  text-align:center;
+  line-height:30px;
+  float:right;
+  font-size:12px;
+  color:#85dc84;
+  border-radius:5px;
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+}
+.list_bottom_right image {
+  width: 130rpx;
+  height: 130rpx; 
+  margin-top: 38rpx;
+}
+
+.ash {
+  width: 100%;
+  height: 15rpx;
+  background: #e6e6e6;
+}
+.icon_phone {
+  float: right;
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 32rpx;
+}
+.icon_phone image {
+  width: 100%;
+  height: 100%;
+}
+.null {
+  text-align: center;
+  margin-top: 100rpx;
+}
+.null image {
+  width: 130rpx;
+  height: 120rpx;
+}
+.null text {
+  display: block;
+  font-size: 14px;
+  color: #e6e6e6;
+}
+.max {
+  font-size: 12px;
+  width: 40rpx;
+  height: 40rpx;
+  background: red;
+  border-radius: 40rpx;
+  position: absolute;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  top: 0;
+  right: 0;
+}
+.tis {
+  color: red;
+  margin-top: 110rpx;
+  font-size: 12px;
+  padding: 0 30rpx;
+}
+.home_siji_title {
+  border-bottom: 1px solid #f3f3f3;
+  padding: 30rpx;
+  font-size: 16px;
+}
+.home_news {
+  padding: 0 10px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #d50908;
+  border-bottom: 5px solid #f3f3f3;
+}
+.home_news swiper {
+  width: 100%;
+  height: 65px;
+}
+.home_news_left {
+  float: left;
+  width: 20%;
+}
+.home_news_right {
+  float: left;
+  width: 80%;
+}
+.home_news_left image {
+  width: 50px;
+  height: 50px;
+  line-height: 65px;
+  display: inline-block; 
+  vertical-align: middle;
+}
+.footer_bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  padding-bottom: 10rpx;
+}
