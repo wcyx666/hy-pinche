@@ -1,0 +1,21 @@
+<!--pages/news/news.wxml-->
+<view class="news">
+  <view class="news_home">
+    <view class="news_img" wx:if="{{ newsList.src == '' }}">
+      <image src='{{ newsList.src }}'></image>
+    </view>
+    <view class="news_home_title">
+      {{ newsList.title }}
+    </view>
+    <view class="news_title">
+      <text class="author">作者：<text class="col">{{ newsList.author }}</text></text>
+      <text class="num">时间：<text class="col">{{ newsList.date }}</text></text>
+    </view>
+    <view class="news_content">
+      {{ newsList.content }}
+    </view>
+    <view class="news_img" wx:if="{{ newsList.src2 == '' }}">
+      <image src='{{ newsList.src2 }}'></image>
+    </view>
+  </view>
+</view>

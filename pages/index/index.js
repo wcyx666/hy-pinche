@@ -1,4 +1,4 @@
-
+var bmap = require('../lib/bmap-wx.js');
 var QQMapWX = require('../lib/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
 Page({
@@ -10,6 +10,7 @@ Page({
         'https://www.hyexw.com/image/banner1.png',
         'https://www.hyexw.com/image/banner2.png',
     ],
+    weatherData: '', //百度天气 
     autoplay: true,
     interval: 3000,
     duration: 1000,
@@ -19,7 +20,7 @@ Page({
     newsVertical:true,
     newsInterval: 5000,
     newsautoplay:true,
-    items: [
+    items: [ // 地区车主
       { id:"0", 
         name: '北京', 
         value: '北京', 
@@ -53,7 +54,7 @@ Page({
   },
   onShareAppMessage: function (res) {
     return {
-      title: '@所有人，你不知道的拼车程序',
+      title: '@所有人，你不知道的浑源拼车程序',
       path: '/pages/index/index',
       success: function (res) {
         // 转发成功
@@ -78,13 +79,8 @@ Page({
         local:e.detail.value
       },
       success: function (res) {
-        var arr = [];
-        for (var i = 0; i < res.data.length; i++) {
-          arr.push(res.data[i].uid);
-        }
         that.setData({
           array: res.data,
-          max: Math.max.apply(null, arr)
         })
       }
     })
@@ -129,6 +125,20 @@ Page({
         }
       }
     })
+    // 读取访问量
+    wx.request({
+      url: 'https://www.hyexw.com/duqucount.php',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        that.setData({
+          count: res.data
+        })
+      }
+    })
+    // 排序前5名车主
     wx.request({
       url: 'https://www.hyexw.com/chuxing.php',
       method: 'POST',
@@ -141,6 +151,7 @@ Page({
         })
       }
     })
+    // HY头条
     wx.request({
       url: 'https://www.hyexw.com/hynews.php',
       method: 'POST',
@@ -174,6 +185,26 @@ Page({
         
       }
     })
+
+    // 引用百度地图微信小程序JSAPI模块 
+    // 新建百度地图对象 
+    var BMap = new bmap.BMapWX({
+      ak: 'wDurWN6NL8ENeue9THVGSORwMPv7YY2L'
+    });
+    var fail = function (data) {
+      console.log(data)
+    };
+    var success = function (data) {
+      var weatherData = data.currentWeather[0];
+      that.setData({
+        weatherData: weatherData    
+      });
+    }
+    // 发起weather请求 
+    BMap.weather({
+      fail: fail,
+      success: success
+    });
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

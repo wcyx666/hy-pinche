@@ -8,6 +8,17 @@ App({
     wx.setKeepScreenOn({
       keepScreenOn: true
     })
+    // 统计访问量
+    wx.request({
+      url: 'https://www.hyexw.com/count.php',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res);
+      }
+    })
     // 登录
     wx.login({
       success: res => {

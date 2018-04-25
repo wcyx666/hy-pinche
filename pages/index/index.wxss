@@ -1,6 +1,7 @@
 /* pages/travel/travel.wxss */
 .home {
   width: 100%;
+  position: relative;
 }
 .home_head {
   position: relative;
@@ -232,4 +233,13 @@
   font-size: 12px;
   color: #888;
   padding-bottom: 10rpx;
+}
+.home_wx_info {
+  position: absolute;
+  top: 0;
+  z-index:9;
+  font-size: 14px;
+  color: #fff;
+  padding: 30rpx;
+  line-height:58rpx; 
 }

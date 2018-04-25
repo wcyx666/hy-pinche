@@ -6,22 +6,22 @@
     </view>
   </view>
   <view class="my_list">
-    <view class="my_list_item feedback">
-      <navigator url='/pages/my/coupon/coupon?name={{ info.nickName }}'>
-        分享我的拼车
+    <view class="my_list_item feedback mony">
+      <navigator url='/pages/my/coupon/coupon' hover-class="none">
+        赞助开发者
       </navigator>
     </view>
-    <view class="my_list_item feedback">
-      <navigator url='/pages/my/paoche/paoche?name={{ info.nickName }}'>
-        分享我的跑车
+    <view class="my_list_item feedback share">
+      <navigator url='/pages/my/paoche/paoche?name={{ info.nickName }}' hover-class="none">
+        分享我的
       </navigator>
     </view>
-    <view class="my_list_item about">
-      <navigator url='/pages/my/about/about'>
+    <view class="my_list_item about xieyi">
+      <navigator url='/pages/my/about/about' hover-class="none">
         用户协议
       </navigator> 
     </view>
-    <view class="my_list_item feedback">
+    <view class="my_list_item feedback kefu">
       <text>客服在线</text>   
     </view>
     <button open-type="contact" class="displayNone">客户在线</button>

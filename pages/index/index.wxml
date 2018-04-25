@@ -26,9 +26,11 @@
     <view class="home_news_right">
       <swiper autoplay="{{newsautoplay}}" vertical="{{ newsVertical }}" circular="{{ circular }}" interval="{{newsInterval}}" duration="{{duration}}">
         <block wx:for="{{ news }}">
-          <swiper-item>
-            <view>{{ item.title }}</view>
-          </swiper-item>
+          <navigator url='/pages/news/news?title={{ item.title }}' hover-class="none">
+            <swiper-item>
+              <view>{{ item.title }}</view>
+            </swiper-item>
+          </navigator>
         </block>
       </swiper>
     </view>

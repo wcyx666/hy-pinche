@@ -84,7 +84,7 @@
     </view>
     <view class="reg-agr">
       <navigator url='/pages/my/about/about'>
-        发布即表示您已同意<text>寻师傅服务条款</text>
+        发布即表示您已同意<text>浑源顺风车服务条款</text>
       </navigator>
     </view>
     <view class="default" bindtap='sublimt'>

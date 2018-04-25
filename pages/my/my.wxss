@@ -23,16 +23,26 @@
   position: relative;
 }
 .my_list_item {
-  width: 100%;
   height: 100rpx;
   line-height: 100rpx;
   border-bottom: 1rpx solid #dbdbdb;
-  background: url(https://www.hyexw.com/image/head-back-right.png) no-repeat center right;
-  background-size: 80rpx;
+  padding-left:40px;
 }
-.my_list_item text,
-.my_list_item navigator {
-  margin-left: 30rpx;
+.share {
+  background: url(https://www.hyexw.com/image/icon_share.png) no-repeat center left 10px;
+  background-size: 56rpx;
+}
+.xieyi {
+  background: url(https://www.hyexw.com/image/icon_xieyi.png) no-repeat center  left 10px;
+  background-size: 56rpx;
+}
+.kefu {
+  background: url(https://www.hyexw.com/image/icon_kefu.png) no-repeat center left 10px;
+  background-size: 56rpx;
+}
+.mony {
+  background: url(https://www.hyexw.com/image/icon_mony.png) no-repeat center left 10px;
+  background-size: 56rpx;
 }
 .my_list_item_none {
   border-bottom: none;

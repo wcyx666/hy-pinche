@@ -34,10 +34,10 @@
           </view>
         </view>
     </view>
-    <view class="footer_bottom"> ~ 别滑动了，没有了 ~ </view>
+    <view class="footer_bottom" wx:if="{{ hide }}"> ~ 别滑动了，没有了 ~ </view>
     <view class="null" wx:if="{{ array.length == 0 }}">
       <image src='../img/icon_null.png'></image>
-      <text>没有师傅信息</text>
+      <text>没有车主信息</text>
     </view>
   </view>
 </view>

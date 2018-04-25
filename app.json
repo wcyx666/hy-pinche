@@ -12,7 +12,8 @@
     "pages/pinche/pinche",
     "pages/map/map",
     "pages/driverInfo/driverInfo",
-    "pages/filter/filter"
+    "pages/filter/filter",
+    "pages/news/news"
   ],
   "window":{
     "backgroundTextStyle":"light",

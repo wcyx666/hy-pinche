@@ -1,29 +1,37 @@
 <view class="travel">
   <view class="list-content" wx:if="{{ array.length > 0 }}">
     <view class="list" wx:for="{{ array }}">
-        <view class="info_num">
-          服务人数：{{ item.uid }}
-        </view>
-        <view class="info_content">
-          <view class="list_left">
-            <image src='https://www.hyexw.com/image/chuxing_img.png'></image>
-          </view>
-          <view class="list_right">
-            <view class="server_title">
-              {{ item.name }} <text>{{ item.models }}</text>
-            </view>
-            <view class="server_text">
-              跑车路线：
+        <view class="list_top">
+          <view class="serverUid">我服务过的人数<text>{{ item.uid }}人</text></view>
+          <view class="list_top_left">
+            <view class="list_top_left_localc">
+              <text>起</text>
               {{ item.localc }}
-              <image src='https://www.hyexw.com/image/icon_wf.png'></image>
+            </view>
+            <view class="list_top_left_localc">
+              <text class="zong">终</text>
               {{ item.local }}
             </view>
-            <view class="server_text">
-              车牌：{{ item.server }}
+          </view>
+          <view class="list_top_right" wx:if="{{item.models != ''}}">
+              {{ item.models }}
+          </view>
+        </view>
+        <view class="list_bottom">
+          <view class="list_bottom_left">
+            <view class="list_bottom_prot">
+              每天往返，车接车送
+            </view>
+            <view class="list_bottom_get">
+              <view>出发：每天{{ item.pctime }}</view>
+              <view>返程：每天{{ item.pctimes }}</view>
+            </view>
+            <view class="list_bottom_info">
+              <text>车主</text>/{{ item.lot }}空位
             </view>
           </view>
-          <view class="icon_phone" bindtap='phone' data-phone="{{item.phone}}" data-uid="{{ item.uid }}" data-name="{{item.name}}">
-            <image src='../../img/icon_phone.png'></image>
+          <view class="list_bottom_right" bindtap='phone' data-phone="{{item.phone}}" data-uid="{{ item.uid }}" data-name="{{item.name}}">
+            拨打电话
           </view>
         </view>
     </view>
